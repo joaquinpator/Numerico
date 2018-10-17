@@ -1,4 +1,4 @@
-##########################################################################################Imports
+########################################################################################## Imports
 
 from scipy.optimize import brentq
 import timeit #Para calcular tiempo de corrida
@@ -89,7 +89,7 @@ plt.grid(True)
 plt.savefig(nombre_funcion + extension_graficos)
 plt.show()
 
-# GRAFICA DE f(x)
+# GRAFICA DE f2(x)
 xx = np.linspace(a, b, 256+1)
 yy = f2(xx)
 nombre_funcion = 'f2'
