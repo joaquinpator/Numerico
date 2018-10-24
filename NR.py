@@ -32,10 +32,11 @@ def ddf3(x):
 #dp0 semilla, TOL tolerancia, N0 numero maximo de iteraciones, f funcion, df derivada de funcion
 def NR(p0, TOL, N0, f, df):
 	i = 1
+	print('{0:^4} & {1:^20} & {2:^20} & {3:^20}'.format('i', 'p(i)', 'p(i-1)', 'cota'))
 	while i <= N0 :
 		p = p0 - f(p0)/df(p0)
 		delta = np.abs(p-p0)
-		print('{0:4} {1: .14f} {2: .14f}'.format(i, p0, delta))
+		print('{0:4} & {1: .14f} & {2: .14f} & {3: .14f}'.format(i, p0, p, delta))
 		if np.abs(p-p0)<TOL :
 			delta = np.abs(p-p0)
 			n_iter = i
@@ -47,7 +48,6 @@ def NR(p0, TOL, N0, f, df):
 	delta = np.abs(p-p0)
 	n_iter = i
 	return p, delta, n_iter
-
 
 
 
